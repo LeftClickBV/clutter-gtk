@@ -2,8 +2,8 @@
 # An odd micro number indicates in-progress development, (eg. from git)
 # An even micro number indicates a released version.
 m4_define([clutter_gtk_major], [1])
-m4_define([clutter_gtk_minor], [6])
-m4_define([clutter_gtk_micro], [7])
+m4_define([clutter_gtk_minor], [7])
+m4_define([clutter_gtk_micro], [1])
 m4_define([clutter_gtk_version], [clutter_gtk_major.clutter_gtk_minor.clutter_gtk_micro])
 
 # increase the interface age for each release; if the API changes, set to 0
