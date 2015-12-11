@@ -332,7 +332,7 @@ gtk_clutter_actor_allocate (ClutterActor           *actor,
 
   gtk_widget_size_allocate (priv->widget, &child_allocation);
 
-  if (CLUTTER_ACTOR_IS_REALIZED (actor))
+  if (clutter_actor_is_realized (actor))
     {
       cairo_surface_t *surface;
 

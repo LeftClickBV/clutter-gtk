@@ -25,7 +25,7 @@ gtk_clutter_offscreen_add (GtkContainer *container,
   GTK_CONTAINER_CLASS (_gtk_clutter_offscreen_parent_class)->add (container, child);
 
   if (offscreen->actor != NULL &&
-      CLUTTER_ACTOR_IS_VISIBLE (offscreen->actor))
+      clutter_actor_is_visible (offscreen->actor))
     {
       /* force a relayout */
       clutter_actor_queue_relayout (offscreen->actor);
@@ -41,7 +41,7 @@ gtk_clutter_offscreen_remove (GtkContainer *container,
   GTK_CONTAINER_CLASS (_gtk_clutter_offscreen_parent_class)->remove (container, child);
 
   if (offscreen->actor != NULL &&
-      CLUTTER_ACTOR_IS_VISIBLE (offscreen->actor))
+      clutter_actor_is_visible (offscreen->actor))
     {
       /* force a relayout */
       clutter_actor_queue_relayout (offscreen->actor);
