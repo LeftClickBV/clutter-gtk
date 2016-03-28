@@ -1,3 +1,14 @@
+Clutter-GTK 1.8.0                                                    28/03/2016
+===============================================================================
+
+Changes since 1.6:
+        • Correctly handle HiDPI displays. [Lionel Landwerlin]
+        • Bump dependency of GTK.
+
+List of bugs fixed:
+        #759375 - Obvious Clutter deprecation warnings
+        #758937 - Blurry widgets on hidpi displays
+
 Clutter-GTK 1.6.6                                                    12/10/2015
 ===============================================================================
 
