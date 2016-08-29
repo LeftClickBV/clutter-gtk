@@ -1153,11 +1153,6 @@ gtk_clutter_embed_init (GtkClutterEmbed *embed)
   /* we accept key focus */
   gtk_widget_set_can_focus (widget, TRUE);
 
-  G_GNUC_BEGIN_IGNORE_DEPRECATIONS
-  /* disable double-buffering: it's automatically provided by OpenGL */
-  gtk_widget_set_double_buffered (widget, FALSE);
-  G_GNUC_END_IGNORE_DEPRECATIONS
-
   /* we own the whole drawing of this widget, including the background */
   gtk_widget_set_app_paintable (widget, TRUE);
 
