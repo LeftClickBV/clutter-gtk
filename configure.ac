@@ -211,8 +211,7 @@ AC_CONFIG_FILES([
         clutter-gtk/gtk-clutter-version.h
         
         doc/Makefile
-        doc/reference/Makefile
-        doc/reference/version.xml
+        doc/version.xml
 
         examples/Makefile
 
