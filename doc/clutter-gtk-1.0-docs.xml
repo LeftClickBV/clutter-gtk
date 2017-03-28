@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
-               "http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd" [
-<!ENTITY version SYSTEM "version.xml">
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "xml/gtkdocentities.ent">
+  %gtkdocentities;
 ]>
 
 <book id="clutter-gtk" lang="en" xmlns:xi="http://www.w3.org/2003/XInclude">
   <bookinfo>
-    <title>Clutter-Gtk &version; Reference Manual</title>
-    <releaseinfo>Version &version;</releaseinfo>
+    <title>Clutter-Gtk 1.0 Reference Manual</title>
+    <releaseinfo>for Clutter-GTK &package_version;</releaseinfo>
 
     <copyright>
       <year>2006, 2007, 2008, 2009</year>
@@ -99,19 +102,9 @@
     <xi:include href="xml/api-index-1.0.xml"><xi:fallback /></xi:include>
   </index>
 
-  <index role="1.2">
-    <title>Index of new symbols in 1.2</title>
-    <xi:include href="xml/api-index-1.2.xml"><xi:fallback /></xi:include>
-  </index>
-
   <index role="1.4">
     <title>Index of new symbols in 1.4</title>
     <xi:include href="xml/api-index-1.4.xml"><xi:fallback /></xi:include>
-  </index>
-
-  <index role="1.6">
-    <title>Index of new symbols in 1.6</title>
-    <xi:include href="xml/api-index-1.6.xml"><xi:fallback /></xi:include>
   </index>
 
   <index role="deprecated">

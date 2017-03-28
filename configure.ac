@@ -198,7 +198,7 @@ AC_SUBST(GTK_PREFIX)
 AC_SUBST(GDK_PIXBUF_PREFIX)
 AC_SUBST(CLUTTER_PREFIX)
 
-GTK_DOC_CHECK([1.14], [--flavour=no-tmpl])
+GTK_DOC_CHECK([1.24], [--flavour=no-tmpl])
 
 GOBJECT_INTROSPECTION_CHECK([0.9.12])
 
@@ -211,7 +211,6 @@ AC_CONFIG_FILES([
         clutter-gtk/gtk-clutter-version.h
         
         doc/Makefile
-        doc/version.xml
 
         examples/Makefile
 
