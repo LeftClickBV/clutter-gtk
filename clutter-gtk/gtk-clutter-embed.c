@@ -1271,6 +1271,15 @@ gtk_clutter_embed_set_use_layout_size (GtkClutterEmbed *embed,
    }
 }
 
+extern gboolean
+gtk_clutter_embed_get_honor_stage_size (GtkClutterEmbed *embed);
+
+gboolean
+gtk_clutter_embed_get_honor_stage_size (GtkClutterEmbed *embed)
+{
+  return gtk_clutter_embed_get_use_layout_size (embed);
+}
+
 /**
  * gtk_clutter_embed_get_use_layout_size:
  * @embed: a #GtkClutterEmbed
@@ -1283,7 +1292,7 @@ gtk_clutter_embed_set_use_layout_size (GtkClutterEmbed *embed,
  * Since: 1.4
  */
 gboolean
-gtk_clutter_embed_get_honor_stage_size (GtkClutterEmbed *embed)
+gtk_clutter_embed_get_use_layout_size (GtkClutterEmbed *embed)
 {
   GtkClutterEmbedPrivate *priv = embed->priv;
 
