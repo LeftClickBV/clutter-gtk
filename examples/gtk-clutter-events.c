@@ -3,6 +3,10 @@
 
 #include <clutter-gtk/clutter-gtk.h>
 
+#ifndef EXAMPLES_DATADIR
+#define EXAMPLES_DATADIR "."
+#endif
+
 typedef struct {
 
   GtkWidget    *window;
@@ -181,7 +185,7 @@ main (gint argc, gchar **argv)
                     NULL);
 
   /* Create the main texture that the spin buttons manipulate */
-  pixbuf = gdk_pixbuf_new_from_file ("redhand.png", NULL);
+  pixbuf = gdk_pixbuf_new_from_file (EXAMPLES_DATADIR G_DIR_SEPARATOR_S "redhand.png", NULL);
   if (pixbuf == NULL)
     g_error ("Unable to load pixbuf\n");
 

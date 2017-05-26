@@ -11,6 +11,10 @@
 #define WINHEIGHT       400
 #define RADIUS          150
 
+#ifndef EXAMPLES_DATADIR
+#define EXAMPLES_DATADIR "."
+#endif
+
 typedef struct SuperOH
 {
   ClutterActor *stage;
@@ -146,7 +150,7 @@ main (int argc, char *argv[])
   /* calling gtk_clutter_init* multiple times should be safe */
   g_assert (gtk_clutter_init (NULL, NULL) == CLUTTER_INIT_SUCCESS);
 
-  pixbuf = gdk_pixbuf_new_from_file ("redhand.png", NULL);
+  pixbuf = gdk_pixbuf_new_from_file (EXAMPLES_DATADIR G_DIR_SEPARATOR_S "redhand.png", NULL);
 
   if (!pixbuf)
     g_error("pixbuf load failed");
