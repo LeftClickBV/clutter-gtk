@@ -28,17 +28,21 @@
 
 #include <gtk/gtk.h>
 #include <clutter/clutter.h>
+#include <clutter-gtk/gtk-clutter-version.h>
 
 G_BEGIN_DECLS
 
+CLUTTER_GTK_EXTERN
 ClutterInitError gtk_clutter_init           (int            *argc,
                                              char         ***argv)  G_GNUC_WARN_UNUSED_RESULT;
+CLUTTER_GTK_EXTERN
 ClutterInitError gtk_clutter_init_with_args (int            *argc,
                                              char         ***argv,
                                              const char     *parameter_string,
                                              GOptionEntry   *entries,
                                              const char     *translation_domain,
                                              GError        **error) G_GNUC_WARN_UNUSED_RESULT;
+CLUTTER_GTK_EXTERN
 GOptionGroup *gtk_clutter_get_option_group  (void);
 
 G_END_DECLS

@@ -34,9 +34,7 @@
  * gtk_clutter_window_get_stage().
  */
 
-#ifdef HAVE_CONFIG_H
 #include "config.h"
-#endif
 
 #include "gtk-clutter-window.h"
 #include "gtk-clutter-actor.h"

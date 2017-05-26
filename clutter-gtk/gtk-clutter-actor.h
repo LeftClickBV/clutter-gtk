@@ -30,6 +30,7 @@
 
 #include <gtk/gtk.h>
 #include <clutter/clutter.h>
+#include <clutter-gtk/gtk-clutter-version.h>
 
 G_BEGIN_DECLS
 
@@ -76,10 +77,15 @@ struct _GtkClutterActorClass
   void (*_clutter_gtk_reserved6) (void);
 };
 
+CLUTTER_GTK_EXTERN
 GType         gtk_clutter_actor_get_type          (void) G_GNUC_CONST;
+CLUTTER_GTK_EXTERN
 ClutterActor *gtk_clutter_actor_new               (void);
+CLUTTER_GTK_EXTERN
 ClutterActor *gtk_clutter_actor_new_with_contents (GtkWidget       *contents);
+CLUTTER_GTK_EXTERN
 GtkWidget *   gtk_clutter_actor_get_contents      (GtkClutterActor *actor);
+CLUTTER_GTK_EXTERN
 GtkWidget *   gtk_clutter_actor_get_widget        (GtkClutterActor *actor);
 
 G_END_DECLS

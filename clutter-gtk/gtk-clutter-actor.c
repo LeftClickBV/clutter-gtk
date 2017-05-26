@@ -35,11 +35,9 @@
  * use #GtkClutterActor in a #ClutterStage handled by Clutter alone.
  */
 
-#ifdef HAVE_CONFIG_H
 #include "config.h"
-#endif
 
-#include "gtk-clutter-actor.h"
+#include "gtk-clutter-actor-internal.h"
 #include "gtk-clutter-offscreen.h"
 
 #include <math.h>

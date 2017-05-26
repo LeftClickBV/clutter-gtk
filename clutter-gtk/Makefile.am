@@ -13,6 +13,7 @@ AM_CPPFLAGS = \
 	-DPREFIX=\""$(prefix)"\" 		\
 	-DLIBDIR=\""$(libdir)"\"		\
 	-DCLUTTER_GTK_COMPILATION		\
+	$(CLUTTER_GTK_HIDDEN_VISIBILITY_CFLAGS)	\
 	$(CLUTTER_GTK_DEPRECATED_CFLAGS)	\
 	$(CLUTTER_GTK_DEBUG_CFLAGS) 		\
 	$(NULL)
@@ -46,9 +47,7 @@ source_h_private = \
 # please, keep the list sorted alphabetically
 libclutter_gtk_@CLUTTER_GTK_API_VERSION@_la_SOURCES = $(source_c) $(source_h) $(source_h_private)
 libclutter_gtk_@CLUTTER_GTK_API_VERSION@_la_LIBADD  = $(CLUTTER_GTK_DEPS_LIBS) $(LIBM)
-libclutter_gtk_@CLUTTER_GTK_API_VERSION@_la_LDFLAGS = \
-	$(CLUTTER_GTK_LT_LDFLAGS) \
-	-export-symbols-regex "^gtk_clutter.*"
+libclutter_gtk_@CLUTTER_GTK_API_VERSION@_la_LDFLAGS = $(CLUTTER_GTK_LT_LDFLAGS)
 
 cluttergtkheadersdir = $(includedir)/clutter-gtk-@CLUTTER_GTK_API_VERSION@/clutter-gtk
 

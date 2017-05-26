@@ -29,6 +29,7 @@
 
 #include <gtk/gtk.h>
 #include <clutter/clutter.h>
+#include <clutter-gtk/gtk-clutter-version.h>
 
 G_BEGIN_DECLS
 
@@ -81,12 +82,17 @@ struct _GtkClutterEmbedClass
   void (*_clutter_gtk_reserved6) (void);
 };
 
+CLUTTER_GTK_EXTERN
 GType         gtk_clutter_embed_get_type  (void) G_GNUC_CONST;
 
+CLUTTER_GTK_EXTERN
 GtkWidget *   gtk_clutter_embed_new       (void);
+CLUTTER_GTK_EXTERN
 ClutterActor *gtk_clutter_embed_get_stage (GtkClutterEmbed *embed);
+CLUTTER_GTK_EXTERN
 void          gtk_clutter_embed_set_use_layout_size (GtkClutterEmbed *embed,
 						     gboolean use_layout_size);
+CLUTTER_GTK_EXTERN
 gboolean      gtk_clutter_embed_get_use_layout_size (GtkClutterEmbed *embed);
 
 G_END_DECLS

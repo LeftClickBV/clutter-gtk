@@ -102,6 +102,11 @@ G_BEGIN_DECLS
          (CLUTTER_GTK_MAJOR_VERSION == (major) && CLUTTER_GTK_MINOR_VERSION > (minor)) || \
          (CLUTTER_GTK_MAJOR_VERSION == (major) && CLUTTER_GTK_MINOR_VERSION == (minor) && CLUTTER_GTK_MICRO_VERSION >= (micro)))
 
+#ifndef CLUTTER_GTK_EXTERN
+#define CLUTTER_GTK_EXTERN extern
+#endif
+
+CLUTTER_GTK_EXTERN
 gboolean gtk_clutter_check_version (guint major,
                                     guint minor,
                                     guint micro);

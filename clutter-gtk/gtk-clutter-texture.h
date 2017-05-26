@@ -29,6 +29,7 @@
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gtk/gtk.h>
 #include <clutter/clutter.h>
+#include <clutter-gtk/gtk-clutter-version.h>
 
 G_BEGIN_DECLS
 
@@ -91,19 +92,25 @@ struct _GtkClutterTextureClass
   ClutterTextureClass parent_class;
 };
 
+CLUTTER_GTK_EXTERN
 GQuark gtk_clutter_texture_error_quark (void);
+CLUTTER_GTK_EXTERN
 GType gtk_clutter_texture_get_type (void) G_GNUC_CONST;
 
+CLUTTER_GTK_EXTERN
 ClutterActor *  gtk_clutter_texture_new (void);
 
+CLUTTER_GTK_EXTERN
 gboolean        gtk_clutter_texture_set_from_pixbuf     (GtkClutterTexture *texture,
                                                          GdkPixbuf         *pixbuf,
                                                          GError           **error);
+CLUTTER_GTK_EXTERN
 gboolean        gtk_clutter_texture_set_from_stock      (GtkClutterTexture *texture,
                                                          GtkWidget         *widget,
                                                          const gchar       *stock_id,
                                                          GtkIconSize        icon_size,
                                                          GError           **error);
+CLUTTER_GTK_EXTERN
 gboolean        gtk_clutter_texture_set_from_icon_name  (GtkClutterTexture *texture,
                                                          GtkWidget         *widget,
                                                          const gchar       *icon_name,
