@@ -60,6 +60,7 @@ if not meson.is_cross_build()
                      includes: [ 'Clutter-1.0', 'Gtk-3.0' ],
                      install: true,
                      extra_args: [
+                       '--quiet',
                        '--c-include="clutter-gtk/clutter-gtk.h"',
                        '-DCLUTTER_GTK_COMPILATION',
                      ])
