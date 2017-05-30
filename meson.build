@@ -26,7 +26,7 @@ else
 endif
 
 gtk_clutter_api_name = '@0@-@1@'.format(meson.project_name(), gtk_clutter_api_version)
-gtk_clutter_api_path = join_paths(meson.project_name(), gtk_clutter_api_name)
+gtk_clutter_api_path = join_paths(gtk_clutter_api_name, meson.project_name())
 
 gtk_clutter_prefix = get_option('prefix')
 gtk_clutter_libdir = join_paths(gtk_clutter_prefix, get_option('libdir'))
