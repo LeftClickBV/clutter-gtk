@@ -7,7 +7,7 @@ project('clutter-gtk', 'c', version: '1.8.3',
         ],
         meson_version: '>= 0.40.1')
 
-add_project_arguments([ '-D_XOPEN_SOURCE=500' ], language: 'c')
+add_project_arguments([ '-D_XOPEN_SOURCE=700' ], language: 'c')
 
 cc = meson.get_compiler('c')
 host_system = host_machine.system()
