@@ -61,7 +61,7 @@ if not meson.is_cross_build()
                      install: true,
                      extra_args: [
                        '--quiet',
-                       '--c-include="clutter-gtk/clutter-gtk.h"',
+                       '--c-include=clutter-gtk/clutter-gtk.h',
                        '-DCLUTTER_GTK_COMPILATION',
                      ])
 endif
