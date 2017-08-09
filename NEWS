@@ -1,3 +1,16 @@
+Clutter-GTK 1.8.4                                                    09/08/2017
+===============================================================================
+
+Changes since 1.8.2:
+        • Add Meson build, in parallel with Autotools
+        • Fix cruft in the Autotools build
+        • Fix a snafu in the name of the getter for the
+          GtkClutterEmbed:use-layout-size property; the ABI is preserved
+
+List of bugs fixed:
+        #783431 - Cannot build clutter-gtk with meson on FreeBSD because
+                  -D_XOPEN_SOURCE=500 is too old
+
 Clutter-GTK 1.8.2                                                    18/09/2016
 ===============================================================================
 

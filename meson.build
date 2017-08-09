@@ -1,4 +1,4 @@
-project('clutter-gtk', 'c', version: '1.8.3',
+project('clutter-gtk', 'c', version: '1.8.4',
         license: 'LGPLv2.1+',
         default_options: [
           'buildtype=debugoptimized',

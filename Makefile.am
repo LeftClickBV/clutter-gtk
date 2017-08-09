@@ -27,6 +27,7 @@ meson_build_data = \
 	examples/meson.build \
 	po/meson.build \
 	$()
+
 EXTRA_DIST += $(meson_build_data)
 
 DISTCHECK_CONFIGURE_FLAGS = --enable-gtk-doc --enable-maintainer-flags
