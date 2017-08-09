@@ -6,9 +6,13 @@ m4_define([clutter_gtk_minor], [8])
 m4_define([clutter_gtk_micro], [5])
 m4_define([clutter_gtk_version], [clutter_gtk_major.clutter_gtk_minor.clutter_gtk_micro])
 
-# increase the interface age for each release; if the API changes, set to 0
-m4_define([clutter_gtk_interface_age], [5])
-m4_define([clutter_gtk_binary_age], [m4_eval(100 * clutter_gtk_minor + clutter_gtk_micro)])
+# Keep the interface age in sync with the micro version; we are only allowed
+# to add new API during unstable development cycles
+m4_define([clutter_gtk_interface_age],
+          [m4_if(m4_eval(clutter_gtk_minor % 2), [1], [0], [clutter_gtk_micro])])
+
+m4_define([clutter_gtk_binary_age],
+          [m4_eval(100 * clutter_gtk_minor + clutter_gtk_micro)])
 
 m4_define([clutter_gtk_release_status],
           [m4_if(m4_eval(clutter_gtk_micro % 2), [1],
@@ -42,7 +46,7 @@ AC_SUBST([CLUTTER_GTK_API_VERSION_AM], [1_0])
 AC_SUBST([CLUTTER_GTK_VERSION],        [clutter_gtk_version])
 AC_SUBST([CLUTTER_GTK_RELEASE_STATUS], [clutter_gtk_release_status])
 
-m4_define([lt_current], [m4_eval(100 * clutter_gtk_minor + clutter_gtk_micro - clutter_gtk_interface_age)])
+m4_define([lt_current], [m4_eval(clutter_gtk_binary_age - clutter_gtk_interface_age)])
 m4_define([lt_revision], [clutter_gtk_interface_age])
 m4_define([lt_age], [m4_eval(clutter_gtk_binary_age - clutter_gtk_interface_age)])
 CLUTTER_GTK_LT_CURRENT=lt_current
