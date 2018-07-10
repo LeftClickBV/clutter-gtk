@@ -16,7 +16,7 @@ static gboolean do_rotate = TRUE;
 static int nwidgets;
 
 /* Timeline handler */
-void
+static void
 frame_cb (ClutterTimeline *timeline,
 	  gint             msecs,
 	  gpointer         data)

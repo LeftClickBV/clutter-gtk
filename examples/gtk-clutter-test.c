@@ -67,7 +67,7 @@ input_cb (ClutterStage *stage,
 
 
 /* Timeline handler */
-void
+static void
 frame_cb (ClutterTimeline *timeline, 
 	  gint             msecs,
 	  gpointer         data)
