@@ -22,6 +22,7 @@ AM_CFLAGS = $(MAINTAINER_CFLAGS) $(CLUTTER_GTK_DEPS_CFLAGS)
 
 lib_LTLIBRARIES = libclutter-gtk-@CLUTTER_GTK_API_VERSION@.la
 
+# please, keep the lists sorted alphabetically
 source_c = \
 	gtk-clutter-actor.c 	\
 	gtk-clutter-embed.c 	\
@@ -40,11 +41,11 @@ source_h_public = \
 	$()
 
 source_h_private = \
-	gtk-clutter-offscreen.h		\
 	gtk-clutter-actor-internal.h	\
+	gtk-clutter-embed-private.h	\
+	gtk-clutter-offscreen.h		\
 	$()
 
-# please, keep the list sorted alphabetically
 libclutter_gtk_@CLUTTER_GTK_API_VERSION@_la_SOURCES = $(source_c) $(source_h) $(source_h_private)
 libclutter_gtk_@CLUTTER_GTK_API_VERSION@_la_LIBADD  = $(CLUTTER_GTK_DEPS_LIBS) $(LIBM)
 libclutter_gtk_@CLUTTER_GTK_API_VERSION@_la_LDFLAGS = $(CLUTTER_GTK_LT_LDFLAGS)

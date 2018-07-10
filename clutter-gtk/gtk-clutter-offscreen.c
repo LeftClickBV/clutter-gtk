@@ -4,17 +4,14 @@
 
 #include "config.h"
 
-#include <gtk/gtk.h>
-
-#include "gtk-clutter-embed.h"
 #include "gtk-clutter-offscreen.h"
+
+#include "gtk-clutter-embed-private.h"
 #include "gtk-clutter-actor-internal.h"
 
-G_DEFINE_TYPE (GtkClutterOffscreen, _gtk_clutter_offscreen, GTK_TYPE_BIN);
+#include <gtk/gtk.h>
 
-void _gtk_clutter_embed_set_child_active (GtkClutterEmbed *embed,
-					  GtkWidget *child,
-					  gboolean active);
+G_DEFINE_TYPE (GtkClutterOffscreen, _gtk_clutter_offscreen, GTK_TYPE_BIN)
 
 static void
 gtk_clutter_offscreen_add (GtkContainer *container,

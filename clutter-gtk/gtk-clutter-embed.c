@@ -71,11 +71,13 @@
 
 #include "config.h"
 
-#include <math.h>
-#include <string.h>
-#include "gtk-clutter-embed.h"
+#include "gtk-clutter-embed-private.h"
+
 #include "gtk-clutter-offscreen.h"
 #include "gtk-clutter-actor.h"
+
+#include <math.h>
+#include <string.h>
 
 #include <glib-object.h>
 
