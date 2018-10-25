@@ -1,0 +1,25 @@
+# Slovenian translation for clutter-gtk.
+# Copyright (C) 2018 clutter-gtk's COPYRIGHT HOLDER
+# This file is distributed under the same license as the clutter-gtk package.
+#
+# Matej Urbančič <mateju@svn.gnome.org>, 2018–.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: clutter-gtk master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/clutter-gtk/issues\n"
+"POT-Creation-Date: 2018-09-01 10:15+0000\n"
+"PO-Revision-Date: 2018-10-25 17:46+0200\n"
+"Language-Team: Slovenian <gnome-si@googlegroups.com>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0) ;\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.1.1\n"
+
+#: clutter-gtk/gtk-clutter-texture.c:137
+#, c-format
+msgid "Stock ID '%s' not found"
+msgstr "Vrednosti ID zaloge »%s« ni mogoče najti"
