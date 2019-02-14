@@ -1093,7 +1093,8 @@ gtk_clutter_embed_class_init (GtkClutterEmbedClass *klass)
   /**
    * GtkClutterEmbed:use-layout-size:
    *
-   * The #GtkWidget to be embedded into the #GtkClutterActor
+   * Whether to use the reported size of the LayoutManager on the stage as the widget size.
+   * See gtk_clutter_embed_set_use_layout_size() for details.
    *
    * Since: 1.4
    */
