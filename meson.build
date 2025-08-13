@@ -155,10 +155,12 @@ endif
 # Dependencies
 clutter_req_version = '>= 1.23.7'
 gtk_req_version = '>= 3.21.0'
+webkit_req_version = '>= 2.48.0'
 
 mathlib_dep = cc.find_library('m', required: false)
 clutter_dep = dependency('clutter-1.0', version: clutter_req_version)
 gtk_dep = dependency('gtk+-3.0', version: gtk_req_version)
+webkit_dep = dependency('webkit2gtk-4.1', version: webkit_req_version)
 
 configure_file(output: 'config.h', configuration: config_h) 
 
